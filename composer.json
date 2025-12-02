@@ -2,28 +2,28 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Laravel 12 API Project",
+    "keywords": ["laravel", "framework", "api"],
     "license": "MIT",
+
     "require": {
         "php": "^8.2",
         "darkaonline/l5-swagger": "^9.0",
         "filament/filament": "^4.0",
+        "google-gemini-php/laravel": "^2.0",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.10.1",
+        "laravel/tinker": "^2.8",
         "spatie/laravel-permission": "^6.23"
     },
     "require-dev": {
+        "laravel/pint": "^1.0",
+        "mockery/mockery": "^1.5",
         "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.24",
-        "laravel/sail": "^1.41",
-        "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
-        "pestphp/pest": "^4.1",
-        "pestphp/pest-plugin-laravel": "^4.0"
+        "laravel/sail": "^1.40",
+        "laravel/pail": "^1.2"
     },
+
     "autoload": {
         "psr-4": {
             "App\\": "app/",
@@ -31,11 +31,13 @@
             "Database\\Seeders\\": "database/seeders/"
         }
     },
+
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
     },
+
     "scripts": {
         "setup": [
             "composer install",
@@ -73,11 +75,13 @@
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
     },
+
     "extra": {
         "laravel": {
             "dont-discover": []
         }
     },
+
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -87,6 +91,7 @@
             "php-http/discovery": true
         }
     },
+
     "minimum-stability": "stable",
     "prefer-stable": true
 }
